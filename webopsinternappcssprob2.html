@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>hehe</title>
+    <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans" rel='stylesheet' type="text/css" />
+	<style type="text/css">
+		body{
+			background-color: aqua;
+		}
+		#ctoc{
+			position: absolute;
+			height: 50px;
+			width: 200px;
+			background-color: red;
+			animation: corner 3s  infinite  linear ;//this is setting the animation time number of times and the progression of the animation as time progreses
+		}
+		@keyframes corner{
+			from{
+				top:0px;
+				left: 00px;//starting point
+			}
+			to{
+				top: 0px;
+				left: 87%;
+			}
+		}
+		ul{
+			position: absolute;
+			top: 40px;
+			list-style: url("./bullet.png");
+		}
+		ul:hover{
+			list-style: url("./bullet2.png");
+		}
+        #liste1{
+            color: red;
+            font-family: Droid Sans;
+            
+        }
+        #liste2{
+            color: red;
+             font-family: Open Sans;
+        }
+	</style>
+</head>
+<body>
+<div id="ctoc">
+	this is the corner to corner box
+</div>
+<ul>
+	<li id="liste1"><i>heh</i>this </li>
+	<li id="liste2"><b> yo</b>consider</li>
+	<li>as </li>
+	<li>bullets</li>
+</ul>
+
+
+</body>
+</html>

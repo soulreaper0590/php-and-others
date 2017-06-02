@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html><!-- i did not have time to write the whole code so wrote only the structures
+just one xml tag..please foloow rest all others will be the extention of it ...i had to create a table for the whole thing and that would be pritty reduntant too .. so please under stand -->
+<head>
+	<title>third js problem</title>
+	<style type="text/css">
+		.hidden{
+			display:none;
+		}
+	</style>
+</head>
+<body>
+	<button id="btn" onclick="function1()">
+	click me!! to proceed
+		
+	</button><br>
+	<br>
+	<select class="hidden" id="select">
+		<option>select</option>
+		<option value="1">table1</option>
+		<option value="2">table2</option>
+		<option value="3">table3</option>
+	</select>
+	<p id="anvai"></p>
+
+
+
+	<script type="text/javascript">
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+    	if (this.readyState == 4 && this.status == 200) {
+    		myFunction(this);
+    	}
+    };
+	xhttp.open("GET", "book.xml", true);
+	xhttp.send();//loading the the xml documents
+	document.getElementById('select').addEventListener('change', function2);
+
+	function function1(){
+		var select = document.getElementById("select");
+		select.classList.remove('hidden');//adding the hidden class to hide it 
+		document.getElementById('btn').classList.add('hidden');
+
+	}
+	function function2(){
+		var select = document.getElementById("select");
+		if (select.value==1) {
+			document.getElementById('anvai').innerHTML=  xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+		}
+		if (select.value==2) {
+			document.getElementById('anvai').innerHTML=  xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+		}
+		if (select.value==3) {
+			document.getElementById('anvai').innerHTML=  xmlDoc.getElementsByTagName("title")[0].childNodes[0].nodeValue;
+		}
+
+	}
+
+
+	
+
+	</script>
+</body>
+</html>

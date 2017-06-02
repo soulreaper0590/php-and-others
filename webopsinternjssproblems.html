@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jss problems</title>
+</head>
+<body>
+	<table>
+  		<tr>
+  			<th>grocery</th>
+    		<th>pricings</th>
+    		<th>please enter the quantity</th>
+    		<th>net price</th>
+ 	 	</tr>
+  		<tr>
+    		<th>potatoes</th>
+    		<th>15</th>
+    		<th><input type="number" id="input1" placeholder="please enter the quantity"> </th>
+    		<th id="netprice1">net price</th>
+  		</tr>
+  		
+  		<tr>
+    		<th>tomatoes</th>
+    		<th>10</th>
+    		<th><input type="number" id="input2" placeholder="please enter the quantity"> </th>
+    		<th id="netprice2">net price</th>
+  		</tr>
+  		<tr>
+    		<th>lady finger</th>
+    		<th>40</th>
+    		<th><input type="number" id="input3" placeholder="please enter the quantity"> </th>
+    		<th id="netprice3">net price</th>
+  		</tr>
+  		<tr>
+    		<th>bottle gord</th>
+    		<th>3</th>
+    		<th><input type="number" id="input4" placeholder="please enter the quantity"> </th>
+    		<th id="netprice4">net price</th>
+  		</tr>
+  		<tr>
+  			<th></th>
+  			<th></th>
+  			<th></th>
+  			<th id="total"> total </th>
+  		</tr>
+	</table>
+	<button onclick="calculation()" id="calculate">calculate</button>
+  
+    <br><br><br><br>
+    input for discount <input type="number" name="discount" id="discountvalue">
+  
+
+  <h2 id="dp">Grand Total : </h2>
+
+
+	<script type="text/javascript">
+		function calculation(){
+			var value1 = document.getElementById('netprice1');
+			var value2 = document.getElementById('netprice2');
+			var value3 = document.getElementById('netprice3');
+			var value4 = document.getElementById('netprice4');
+			var input1 = document.getElementById('input1');
+			var input2 = document.getElementById('input2');
+			var input3 = document.getElementById('input3');
+			var input4 = document.getElementById('input4');
+      var discount = document.getElementById('discountvalue').value;
+      var total1 = input1.value * 15;
+			value1.innerHTML = total1;
+      var total2 = input2.value * 10;
+      value2.innerHTML = total2;
+      var total3 = input3.value * 40;
+      value3.innerHTML = total3;
+      var total4 = input4.value * 3;
+      value4.innerHTML = total4;
+      var tuttu = total1 +total2+ total3+ total4;
+      document.getElementById('total').innerHTML = tuttu ;
+      if(Number.isInteger(discount)){
+        alert('please enetr an integer please'); 
+      }
+      if(discount<0 || discount>50){
+        alert("please enter of dicount between 0 and 50");
+      }
+      else{
+        var tyrt = discount * tuttu;
+        tyrt= tyrt/100;
+        document.getElementById('dp').innerHTML = " Grand total is :" + tyrt; 
+      }
+
+
+		};
+	</script>
+</body>
+</html>
